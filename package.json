@@ -1,0 +1,72 @@
+{
+  "name": "bulk-operations",
+  "private": true,
+  "scripts": {
+    "build": "tsc && remix build",
+    "predev": "prisma generate && prisma migrate deploy",
+    "dev": "shopify app dev",
+    "config:link": "shopify app config link",
+    "config:push": "shopify app config push",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "config:use": "shopify app config use",
+    "env": "shopify app env",
+    "start": "remix-serve build/index.js",
+    "docker-start": "npm run setup && npm run start",
+    "setup": "prisma generate && prisma migrate deploy",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "shopify": "shopify",
+    "prisma": "prisma",
+    "graphql-codegen": "graphql-codegen"
+  },
+  "dependencies": {
+    "@json2csv/plainjs": "^7.0.5",
+    "@prisma/client": "^4.13.0",
+    "@remix-run/dev": "^2.0.0",
+    "@remix-run/node": "^2.0.0",
+    "@remix-run/react": "^2.0.0",
+    "@remix-run/serve": "^2.0.0",
+    "@shopify/app": "3.53.1",
+    "@shopify/cli": "3.53.1",
+    "@shopify/polaris": "^12.0.0",
+    "@shopify/polaris-icons": "^8.0.0",
+    "@shopify/shopify-api": "^9.0.1",
+    "@shopify/shopify-app-remix": "^2.3.0",
+    "@shopify/shopify-app-session-storage-prisma": "^2.0.3",
+    "axios": "^1.6.6",
+    "export-from-json": "^1.7.4",
+    "export-to-csv": "^1.2.2",
+    "isbot": "^4.1.0",
+    "json-2-csv": "^5.0.1",
+    "json2csv": "^6.0.0-alpha.2",
+    "papaparse": "^5.4.1",
+    "prisma": "^4.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@remix-run/eslint-config": "^2.0.0",
+    "@shopify/api-codegen-preset": "^0.0.1",
+    "@shopify/app-bridge-types": "^0.0.3",
+    "@types/eslint": "^8.40.0",
+    "@types/json2csv": "^5.0.7",
+    "@types/node": "^20.6.3",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "@types/uuid": "^9.0.7",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2"
+  },
+  "workspaces": [
+    "extensions/*"
+  ],
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ],
+  "author": "stefanovitteri"
+}

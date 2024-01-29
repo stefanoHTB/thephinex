@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "bulk-operations"
+client_id = "97a3dff876d89ec71401ba02521b53e0"
+application_url = "https://tall-profile-nominated-consistently.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_customers,read_customers,read_products,read_discounts,write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://tall-profile-nominated-consistently.trycloudflare.com/auth/callback",
+  "https://tall-profile-nominated-consistently.trycloudflare.com/auth/shopify/callback",
+  "https://tall-profile-nominated-consistently.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "oroa-development.myshopify.com"
